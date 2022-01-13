@@ -196,7 +196,7 @@ class Footers extends Component {
     render() {
         return (
             <>
-                {/* ===============  Newsletter area start =============== */}h
+                {/* ===============  Newsletter area start =============== */}
                 
                 {/* ===============  Newsletter area end =============== */}
 
