@@ -20,6 +20,9 @@
     },
     "tel": {
       "type": "integer"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

@@ -33,13 +33,15 @@ import blogStandard from "./components/pages/blog/BlogStandard";
 import blogDetails from "./components/pages/blog/BlogDetails";
 
 
-
+import 'react-toastify/dist/ReactToastify.css';
 
 //Initializations All Css
 import './index.css';
 import './index.scss';
 import Teste from "./components/pages/teste/Teste";
 import ListTeste from "./components/pages/teste/ListTeste";
+import AddTeste from "./components/pages/teste/AddTeste";
+import EditTeste from "./components/pages/teste/EditTeste";
 
 
 
@@ -77,7 +79,11 @@ class Root extends React.Component {
 
 
                         <Route path={`${process.env.PUBLIC_URL}/teste`} component={Teste} />
+
                         <Route path={`${process.env.PUBLIC_URL}/list-teste`} component={ListTeste} />
+                        <Route path={`${process.env.PUBLIC_URL}/add-teste`} component={AddTeste} />
+                        <Route path={`${process.env.PUBLIC_URL}/edit-teste`} component={EditTeste} />
+                        
 
                         
                     </Layout>

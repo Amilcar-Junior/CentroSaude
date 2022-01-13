@@ -15,15 +15,16 @@ import TestesService from "./testesService";
 
 export const createTeste =
 
-    (dados) => async (dispatch) => {
+    (nome, email, tel, date) => async (dispatch) => {
 
         try {
 
             const res = await TestesService.create({
 
-                dados
+                data:{nome, email, tel, date}
 
             });
+
             const { data } = res.data;
             dispatch({
 
@@ -73,7 +74,7 @@ export const updateTeste = (id, dados) => async (dispatch) => {
 
     try {
 
-        const res = await TestesService.update(id, dados);
+        const res = await TestesService.update(id, {data: dados});
         const { data } = res.data;
         dispatch({
 

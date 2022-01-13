@@ -42,7 +42,7 @@ class HomePageTwo extends Component {
                    <span  style={{'--i': 18}}/>
                    <span  style={{'--i': 19}}/>
                    <span  style={{'--i': 20}}/>
-                   <div className="rocket" />
+                   {/* <div className="rocket" /> */}
                </div>
            </div>
            {/* End Preloader Area */}

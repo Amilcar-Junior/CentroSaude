@@ -8,12 +8,8 @@ import { retrieveTestes, deleteTeste } from "../../../conection/testes/actions";
 
 class ListTeste extends Component {
 
-
-
   componentDidMount() {
-    console.log("dksjfk");
     this.props.retrieveTestes();
-
   }
 
   removeTeste = (id) => {
@@ -30,14 +26,26 @@ class ListTeste extends Component {
 
     const { testes } = this.props;
 
-
     return (
       <>
         <div className="container">
           <div className="row">
+          <div className="end" />
+            <div className="col-1">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+
+                  <Link to={`${process.env.PUBLIC_URL}/`}>
+                    <i class="fas fa-arrow-left" /> Voltar
+                  </Link>
+
+                </span>
+
+              </div>
+            </div>
             <div className="col-lg-12">
               <div className="end" />
-              <h3 style={{ color: "#f9812a" }}>Lista de Testes</h3>
+              <h3 style={{ color: "#456caf" }}>Lista de Testes</h3>
               <br />
 
               <div>
@@ -65,6 +73,8 @@ class ListTeste extends Component {
 
                       <th>Telefone</th>
 
+                      <th>Data</th>
+
                       <th>Actions</th>
 
                     </tr>
@@ -77,7 +87,7 @@ class ListTeste extends Component {
 
                       testes.map(
 
-                        ({ id, attributes: { nome, email, tel } }, i) => (
+                        ({ id, attributes: { nome, email, tel, date } }, i) => (
 
                           <tr key={i}>
                             <td>{id}</td>
@@ -87,6 +97,8 @@ class ListTeste extends Component {
                             <td>{email}</td>
 
                             <td>{tel}</td>
+
+                            <td>{date}</td>
 
 
                             <td className="table-action-col">
@@ -122,7 +134,7 @@ class ListTeste extends Component {
 
                 </table>
               </div>
-
+              <div className="end" />
             </div>
           </div>
         </div>
