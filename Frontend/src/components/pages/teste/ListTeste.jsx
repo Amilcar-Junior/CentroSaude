@@ -8,8 +8,10 @@ import { retrieveTestes, deleteTeste } from "../../../conection/testes/actions";
 
 class ListTeste extends Component {
 
-  componentDidMount() {
 
+
+  componentDidMount() {
+    console.log("dksjfk");
     this.props.retrieveTestes();
 
   }
@@ -30,89 +32,101 @@ class ListTeste extends Component {
 
 
     return (
+      <>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="end" />
+              <h3 style={{ color: "#f9812a" }}>Lista de Testes</h3>
+              <br />
 
-      <div className="list row">
-
-        <div className="col-md-6">
-
-          <h4>Teste List</h4>
-
-          <div>
-
-            <Link to="/add-teste">
-
-              <button className="button-primary">Add teste</button>
-
-            </Link>
-
-          </div>
-
-          <table className="u-full-width">
-
-            <thead>
-
-              <tr>
-
-                <th>Name</th>
-
-                <th>Email</th>
-
-                <th>Telefone</th>
-
-                <th>Actions</th>
-
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              {testes &&
-
-                testes.map(
-
-                  ({ id, Name, email, tel }, i) => (
-
-                    <tr key={i}>
-                      <td>{id}</td>
-                      
-                      <td>{Name}</td>
-
-                      <td>{email}</td>
-
-                      <td>{tel}</td>
+              <div>
+                <div className="col-2">
+                  <Link to="/add-teste" className="btn btn-success">
+                    <i class="fas fa-plus" /> Adicionar
+                  </Link>
+                </div>
+                <br />
 
 
-                      <td>
+              </div>
 
-                        <button onClick={() => this.removeTeste(id)}>
+              <div className="table-responsive">
+                <table className="table table-striped">
 
-                          Delete
+                  <thead>
 
-                        </button>
+                    <tr>
+                      <th>ID</th>
 
-                        <Link to={`/edit-teste/${id}`}>
+                      <th>Name</th>
 
-                          <button>Edit</button>
+                      <th>Email</th>
 
-                        </Link>
+                      <th>Telefone</th>
 
-                      </td>
+                      <th>Actions</th>
 
                     </tr>
 
-                  )
+                  </thead>
 
-                )}
+                  <tbody>
 
-            </tbody>
+                    {testes &&
 
-          </table>
+                      testes.map(
 
+                        ({ id, attributes: { nome, email, tel } }, i) => (
+
+                          <tr key={i}>
+                            <td>{id}</td>
+
+                            <td>{nome}</td>
+
+                            <td>{email}</td>
+
+                            <td>{tel}</td>
+
+
+                            <td className="table-action-col">
+                              <div className="row g-1">
+                                <div className="col-xs-12 col-md-6 text-center">
+                                  <Link
+                                    className="btn btn-danger btn-sm me-2"
+                                    onClick={() => this.removeTeste(id)}>
+
+                                    <i className="fas fa-trash" /> Eliminar
+                                  </Link>
+                                </div>
+
+                                <div className="col-xs-6 col-md-6 text-center">
+                                  <Link
+                                    to={`/edit-teste/${id}`}
+                                    className="btn btn-primary btn-sm"
+                                  >
+                                    <i className="fas fa-edit" /> Editar
+                                  </Link>
+                                </div>
+                              </div>
+
+                            </td>
+
+                          </tr>
+
+                        )
+
+                      )}
+
+                  </tbody>
+
+                </table>
+              </div>
+
+            </div>
+          </div>
         </div>
-
-      </div>
-
+      </>
     );
 
   }
