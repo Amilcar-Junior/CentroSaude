@@ -15,28 +15,27 @@ import TestesService from "./testesService";
 
 export const createTeste =
 
-    (Nome, email, tel) => async (dispatch) => {
+    (dados) => async (dispatch) => {
 
         try {
 
             const res = await TestesService.create({
 
-                Nome,
-                email,
-                tel,
+                dados
 
             });
-
+            const { data } = res.data;
             dispatch({
 
                 type: CREATE_TESTE,
 
-                payload: res.data,
+                payload: data,
+                
 
             });
 
             toast.success('Teste adicionado com sucesso!');
-            return Promise.resolve(res.data);
+            return Promise.resolve(data);
 
         } catch (err) {
 
@@ -52,12 +51,12 @@ export const retrieveTestes = () => async (dispatch) => {
     try {
 
         const res = await TestesService.getAll();
-
+        const { data } = res.data;
         dispatch({
 
             type: RETRIEVE_TESTES,
 
-            payload: res.data,
+            payload: data,
 
         });
 
@@ -70,12 +69,12 @@ export const retrieveTestes = () => async (dispatch) => {
 
 };
 
-export const updateTeste = (id, data) => async (dispatch) => {
+export const updateTeste = (id, dados) => async (dispatch) => {
 
     try {
 
-        const res = await TestesService.update(id, data);
-
+        const res = await TestesService.update(id, dados);
+        const { data } = res.data;
         dispatch({
 
             type: UPDATE_TESTE,
@@ -85,7 +84,7 @@ export const updateTeste = (id, data) => async (dispatch) => {
         });
 
         toast.success('Teste foi alterado com sucesso!')
-        return Promise.resolve(res.data);
+        return Promise.resolve(data);
 
     } catch (err) {
         toast.error('Teste não foi alterado!')

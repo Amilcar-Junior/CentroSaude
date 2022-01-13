@@ -1,5 +1,5 @@
 {
-  "name": "web-service",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -14,13 +14,13 @@
     "@strapi/strapi": "4.0.4",
     "@strapi/plugin-users-permissions": "4.0.4",
     "@strapi/plugin-i18n": "4.0.4",
-    "sqlite3": "5.0.2"
+    "mysql": "2.18.1"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "5606e1d4-ef98-4e4c-91ee-240606edf44e"
+    "uuid": "4920b972-0c43-4271-b99d-fc8b198ae809"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",
