@@ -9,7 +9,6 @@ class Layout extends Component {
             <>
                 <Headers/>
                 {this.props.children}
-                
                 <Footers/>
             </>
         );
