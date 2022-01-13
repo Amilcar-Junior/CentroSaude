@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "amilcars",
+  "info": {
+    "singularName": "amilcar",
+    "pluralName": "amilcars",
+    "displayName": "Amilcar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "data": {
+      "type": "date"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
