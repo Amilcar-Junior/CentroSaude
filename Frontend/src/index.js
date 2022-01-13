@@ -40,6 +40,7 @@ import './index.css';
 import './index.scss';
 import Teste from "./components/pages/teste/Teste";
 import ListTeste from "./components/pages/teste/ListTeste";
+import AmilcarList from "./components/pages/amilcar/AmilcarList";
 
 //Default Warniing Error Hide
 console.log = console.warn = console.error = () => { };
@@ -79,6 +80,8 @@ class Root extends React.Component {
 
                         <Route path={`${process.env.PUBLIC_URL}/teste`} component={Teste} />
                         <Route path={`${process.env.PUBLIC_URL}/list-teste`} component={ListTeste} />
+
+                        <Route path={`${process.env.PUBLIC_URL}/list-amilcar`} component={AmilcarList} />
                     </Layout>
                 </Switch>
             </BrowserRouter>

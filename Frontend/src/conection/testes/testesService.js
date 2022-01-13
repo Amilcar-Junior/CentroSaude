@@ -4,31 +4,31 @@ class TestesService{
 
  getAll() {
 
-   return http.get("/api/testes");
+   return http.get("/testes");
 
  }
 
  get(id) {
 
-   return http.get(`/api/testes/${id}`);
+   return http.get(`/testes/${id}`);
 
  }
 
  create(data) {
 
-   return http.post("/api/testes", data);
+   return http.post("/testes", data);
 
  }
 
  update(id, data) {
 
-   return http.put(`/api/testes/${id}`, data);
+   return http.put(`/testes/${id}`, data);
 
  }
 
  delete(id) {
 
-   return http.delete(`/api/testes/${id}`);
+   return http.delete(`/testes/${id}`);
 
  }
 
