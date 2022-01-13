@@ -204,7 +204,7 @@ class Footers extends Component {
                 <div className="footer-area">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-4 col-md-12">
+                            <div className="col-lg-5 col-md-12">
                                 <div className="footer-info">
                                     <div className="footer-logo">
                                         <img src={secondLogo} alt="" className="img-fluid" />
@@ -230,7 +230,7 @@ class Footers extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-12">
+                            <div className="col-lg-7 col-md-12">
                                 <div className="row">
                                     <div className="col-lg-5 col-md-5 col-sm-7">
                                         <div className="footer-links">
@@ -258,7 +258,7 @@ class Footers extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-3 col-md-3 col-sm-5">
+                                    <div className="col-lg-2 col-md-3 col-sm-5">
                                         <div className="footer-links">
                                             <h5 className="widget-title">support</h5>
                                             <div className="category-list">
