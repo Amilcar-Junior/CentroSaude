@@ -152,6 +152,7 @@ class Headers extends Component {
                                         <li>
                                             <NavLink  activeClassName="active" to={`${process.env.PUBLIC_URL}/about-us`} onClick={this.scrollTop} >Sobre Nos</NavLink >
                                         </li>
+                                        
                                         <li>
                                             <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/destination`} onClick={this.scrollTop} >Praias</NavLink>
                                         </li>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
+import imgLogo from "../../../assets/images/logo/logo.png"
 class Teste extends Component {
     componentDidMount(){
         this.scrollTop();
@@ -39,16 +40,20 @@ class Teste extends Component {
                 <div className="contact-cards">
                     <div className="container">
                         <div className="row">
+                            {/* <div className="col-lg-2">
+                            <img src={imgLogo}/>
+                            </div> */}
                             <div className="col-lg-4 col-md-6 col-sm-12">
                                 <div className="contact-card">
                                     <div className="contact-icon"><i className="flaticon-arrival" />
                                     </div>
                                     <div className="contact-info">
-                                        <h5>Address</h5>
+                                        <h5>amilcar</h5>
                                         <p>971-949 8th Ave 949 New York, NY</p>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div className="col-lg-4 col-md-6 col-sm-12">
                                 <div className="contact-card">
                                     <div className="contact-icon"><i className="flaticon-customer-service" />
