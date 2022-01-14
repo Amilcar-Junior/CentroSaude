@@ -209,8 +209,9 @@ class Footers extends Component {
                                     <div className="footer-logo">
                                         <img src={secondLogo} alt="" className="img-fluid" />
                                     </div>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid maxime aut ut voluptate
-                                        dolorum nisi ducimus ratione</p>
+                                    <p>Prevenir doenças, aliviar o sofrimento e curar os doentes:
+                                        <br/>- Esse é o nosso trabalho!
+                                    </p>
                                     <div className="footer-social-icons">
                                         <h5>Follow Us:</h5>
                                         <ul>
@@ -289,7 +290,7 @@ class Footers extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="copyrigth-area">
-                                    <p>Copyright 2021 <Link to={`#`}>SandWatch</Link> | Design By <Link to={`#`}>Ruben Correia</Link></p>
+                                    <p>Copyright 2021 <Link to={`#`}>Centro Saude CV</Link> | Programer by <a href=""></a><Link to={`#`}>Amilcar Júnior / Kevin Delgado</Link></p>
                                 </div>
                             </div>
                         </div>

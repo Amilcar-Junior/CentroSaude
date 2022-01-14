@@ -154,7 +154,7 @@ class EditTeste extends Component {
                                 <span class="input-group-text" id="addon-wrapping">
 
                                     <Link to={`${process.env.PUBLIC_URL}/list-teste`}>
-                                        <i class="fas fa-arrow-left" />
+                                        <i class="fas fa-arrow-left" /> Voltar
                                     </Link>
 
                                 </span>
