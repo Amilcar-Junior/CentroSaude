@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "Paciente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bi": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "data_nascimento": {
+      "type": "date"
+    },
+    "morada": {
+      "type": "string"
+    },
+    "contacto": {
+      "type": "integer"
+    },
+    "servicos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servico.servico",
+      "mappedBy": "paciente"
+    }
+  }
+}
