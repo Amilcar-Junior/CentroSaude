@@ -27,7 +27,7 @@
     "contacto": {
       "type": "integer"
     },
-    "Especialidade": {
+    "especialidade": {
       "type": "string"
     },
     "cargo": {
