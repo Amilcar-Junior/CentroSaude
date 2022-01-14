@@ -113,5 +113,7 @@ exports
 build
 .strapi-updater.json
 
+
 database.js
 config/*
+
