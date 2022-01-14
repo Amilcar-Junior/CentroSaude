@@ -67,9 +67,9 @@ class MainBanner extends Component {
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12">
                             <div className="main-banner-content-2">
-                                <h2>Amazing Tour In <br />
-                                    <span className="element">Hampshire</span> </h2>
-                                <h3>7 Days, 8 Night Tour</h3>
+                                <h2>Centro Saúde<br />
+                                    <span className="element"></span> </h2>
+                                <h3>Cabo Verde</h3>
                             </div>
                         </div>
                     </div>

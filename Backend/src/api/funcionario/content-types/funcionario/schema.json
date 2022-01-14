@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funcionarios",
+  "info": {
+    "singularName": "funcionario",
+    "pluralName": "funcionarios",
+    "displayName": "Funcionario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bi": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "morada": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contacto": {
+      "type": "integer"
+    },
+    "Especialidade": {
+      "type": "string"
+    },
+    "cargo": {
+      "type": "string"
+    },
+    "servicos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servico.servico",
+      "mappedBy": "funcionario"
+    }
+  }
+}

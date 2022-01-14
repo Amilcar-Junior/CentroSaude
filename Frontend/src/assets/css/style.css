@@ -1603,6 +1603,7 @@ header > .header-area .nav-right {
   background: url(../images/banners/banner-2.png) center no-repeat;
   min-height: 794px;
   background-size: 100% 100%;
+  
 }
 
 .main-banner-2 .main-banner-content-2 {
@@ -1623,7 +1624,7 @@ header > .header-area .nav-right {
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
-  color: #00a599;
+  color: #476bae;
 }
 
 /* =============================
