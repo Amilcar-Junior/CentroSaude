@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicos",
+  "info": {
+    "singularName": "servico",
+    "pluralName": "servicos",
+    "displayName": "Servico"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "descricao": {
+      "type": "string"
+    },
+    "custo": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "paciente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paciente.paciente",
+      "inversedBy": "servicos"
+    },
+    "funcionario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::funcionario.funcionario",
+      "inversedBy": "servicos"
+    },
+    "tipo": {
+      "type": "string"
+    }
+  }
+}
