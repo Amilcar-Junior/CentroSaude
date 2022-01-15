@@ -45,6 +45,9 @@ import EditTeste from "./components/pages/teste/EditTeste";
 import ListPaciente from "./components/pages/paciente/ListPaciente";
 import AddPaciente from "./components/pages/paciente/AddPaciente";
 import EditPaciente from "./components/pages/paciente/EditPaciente";
+import ListFuncionario from "./components/pages/funcionario/ListFuncionario";
+import AddFuncionario from "./components/pages/funcionario/AddFuncionario";
+import EditFuncionario from "./components/pages/funcionario/EditFuncionario";
 
 
 
@@ -93,6 +96,9 @@ class Root extends React.Component {
                         <Route path={`${process.env.PUBLIC_URL}/add-paciente`} component={AddPaciente} />
                         <Route path={`${process.env.PUBLIC_URL}/edit-paciente`} component={EditPaciente} />
                         
+                        <Route path={`${process.env.PUBLIC_URL}/list-funcionario`} component={ListFuncionario} />
+                        <Route path={`${process.env.PUBLIC_URL}/add-funcionario`} component={AddFuncionario} />
+                        <Route path={`${process.env.PUBLIC_URL}/edit-funcionario`} component={EditFuncionario} />
 
                         
                     </Layout>
