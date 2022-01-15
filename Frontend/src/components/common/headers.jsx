@@ -97,16 +97,16 @@ class Headers extends Component {
                                             <i className="fl flaticon-plus">+</i>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <NavLink activeClassName="active" to={"#"} className="sub-item" onClick={this.scrollTop}>Paciente</NavLink>
+                                                    <NavLink activeClassName="active" to={'/list-paciente'} className="sub-item" onClick={this.scrollTop}>Paciente</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink activeClassName="active" to={`#`} className="sub-item" onClick={this.scrollTop}>Funcionario</NavLink>
+                                                    <NavLink activeClassName="active" to={'/list-funcionario'} className="sub-item" onClick={this.scrollTop}>Funcionario</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink activeClassName="active" to={`#`} className="sub-item" onClick={this.scrollTop}>Estoque</NavLink>
+                                                    <NavLink activeClassName="active" to={`/list-estoque`} className="sub-item" onClick={this.scrollTop}>Estoque</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink activeClassName="active" to={`#`} className="sub-item" onClick={this.scrollTop}>Serviços</NavLink>
+                                                    <NavLink activeClassName="active" to={`/list-servico`} className="sub-item" onClick={this.scrollTop}>Serviços</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
