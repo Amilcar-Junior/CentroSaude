@@ -2,32 +2,35 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 
-import { updateTeste } from "../../../conection/testes/actions";
+import { updatePaciente } from "../../../conection/pacientes/actions";
 
 import { Redirect, Link } from "react-router-dom";
 
-import TestesService from "../../../conection/testes/testesService";
+import PacientesService from "../../../conection/pacientes/pacientesService";
 
 
-class EditTeste extends Component {
+class EditPaciente extends Component {
     constructor(props) {
         super(props);
 
+        this.onChangeBi = this.onChangeBi.bind(this);
         this.onChangeNome = this.onChangeNome.bind(this);
-        this.onChangeEmail = this.onChangeEmail.bind(this);
-        this.onChangeTel = this.onChangeTel.bind(this);
-        this.onChangeDate = this.onChangeDate.bind(this);
-        this.saveTeste = this.saveTeste.bind(this);
+        this.onChangeData_nascimento = this.onChangeData_nascimento.bind(this);
+        this.onChangeMorada = this.onChangeMorada.bind(this);
+        this.onChangeContacto = this.onChangeContacto.bind(this);
+        this.savePaciente = this.savePaciente.bind(this);
 
         this.state = {
             id: "",
-            currentTeste: {
+            currentPaciente: {
                 
                 
-                nome: "",
-                email: "",
-                tel: "",
-                date: "",
+                bi: "",
+            nome: "",
+            data_nascimento: "",
+            morada: "",
+            contacto: "",
+
             
             },
             
@@ -37,58 +40,70 @@ class EditTeste extends Component {
     }
 
     componentDidMount() {
-        this.getTeste(window.location.pathname.replace("/edit-teste/", ""));
+        this.getPaciente(window.location.pathname.replace("/edit-paciente/", ""));
     }
 
-    
+    onChangeBi(e) {
+        const bi = e.target.value;
+
+        this.setState(function (prevState) {
+            return {
+                currentPaciente: {
+                    ...prevState.currentPaciente,
+
+                    bi: bi,
+                },
+            };
+        });
+    }
     onChangeNome(e) {
         const nome = e.target.value;
 
         this.setState(function (prevState) {
             return {
-                currentTeste: {
-                    ...prevState.currentTeste,
+                currentPaciente: {
+                    ...prevState.currentPaciente,
 
                     nome: nome,
                 },
             };
         });
     }
-    onChangeEmail(e) {
-        const email = e.target.value;
+    onChangeData_nascimento(e) {
+        const data_nascimento = e.target.value;
 
         this.setState(function (prevState) {
             return {
-                currentTeste: {
-                    ...prevState.currentTeste,
+                currentPaciente: {
+                    ...prevState.currentPaciente,
 
-                    email: email,
+                    data_nascimento: data_nascimento,
                 },
             };
         });
     }
-    onChangeTel(e) {
-        const tel = e.target.value;
+    onChangeMorada(e) {
+        const morada = e.target.value;
 
         this.setState(function (prevState) {
             return {
-                currentTeste: {
-                    ...prevState.currentTeste,
+                currentPaciente: {
+                    ...prevState.currentPaciente,
 
-                    tel: tel,
+                    morada: morada,
                 },
             };
         });
     }
-    onChangeDate(e) {
-        const date = e.target.value;
+    onChangeContacto(e) {
+        const contacto = e.target.value;
 
         this.setState(function (prevState) {
             return {
-                currentTeste: {
-                    ...prevState.currentTeste,
+                currentPaciente: {
+                    ...prevState.currentPaciente,
 
-                    date: date,
+                    contacto: contacto,
                 },
             };
         });
@@ -97,23 +112,23 @@ class EditTeste extends Component {
     
 
 
-    getTeste(id) {
-        TestesService.get(id).then((response) => {
+    getPaciente(id) {
+        PacientesService.get(id).then((response) => {
             console.log(response.data.data)
             this.setState({
-                currentTeste: response.data.data.attributes,
+                currentPaciente: response.data.data.attributes,
                 id: response.data.data.id
             });
         });
     }
 
-    async saveTeste() {
+    async savePaciente() {
         
         this.props
 
-            .updateTeste(
+            .updatePaciente(
                 this.state.id,
-                { ...this.state.currentTeste}
+                { ...this.state.currentPaciente}
             )
 
             .then(() => {
@@ -121,14 +136,14 @@ class EditTeste extends Component {
                     redirect: true,
                 });
             });
-        console.log(this.state.currentTeste)
+        console.log(this.state.currentPaciente)
     }
 
     render() {
-        const { redirect, currentTeste } = this.state;
+        const { redirect, currentPaciente } = this.state;
         
         if (redirect) {
-            return <Redirect to="/list-teste" />;
+            return <Redirect to="/list-paciente" />;
         }
 
         return (
@@ -141,7 +156,7 @@ class EditTeste extends Component {
                             <div class="input-group flex-nowrap">
                                 <span class="input-group-text" id="addon-wrapping">
 
-                                    <Link to={`${process.env.PUBLIC_URL}/list-teste`}>
+                                    <Link to={`${process.env.PUBLIC_URL}/list-paciente`}>
                                         <i class="fas fa-arrow-left" /> Voltar
                                     </Link>
 
@@ -155,9 +170,24 @@ class EditTeste extends Component {
                                 <div className="submit-form">
                                     <div className="ask-inputs">
                                         <div className="row">
-                                            <h5 style={{ color: "#456caf" }}>Editar Dados do Teste</h5>
+                                            <h5 style={{ color: "#456caf" }}>Editar Dados do Paciente</h5>
 
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-2">
+                                                <div className="form-group">
+                                                    <h6 htmlFor="bi">BI</h6>
+
+                                                    <input
+                                                        type="text"
+                                                        className="form-control"
+                                                        id="bi"
+                                                        required
+                                                        value={currentPaciente.bi}
+                                                        onChange={this.onChangeBi}
+                                                        name="bi"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-8">
                                                 <div className="form-group">
                                                     <h6 htmlFor="nome">Nome</h6>
 
@@ -166,54 +196,54 @@ class EditTeste extends Component {
                                                         className="form-control"
                                                         id="nome"
                                                         required
-                                                        value={currentTeste.nome}
+                                                        value={currentPaciente.nome}
                                                         onChange={this.onChangeNome}
                                                         name="nome"
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-2">
                                                 <div className="form-group">
-                                                    <h6 htmlFor="nome">Email</h6>
-
-                                                    <input
-                                                        type="text"
-                                                        className="form-control"
-                                                        id="nome"
-                                                        required
-                                                        value={currentTeste.email}
-                                                        onChange={this.onChangeEmail}
-                                                        name="nome"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="form-group">
-                                                    <h6 htmlFor="nome">Tel</h6>
-
-                                                    <input
-                                                        type="number"
-                                                        className="form-control"
-                                                        id="nome"
-                                                        required
-                                                        value={currentTeste.tel}
-                                                        onChange={this.onChangeTel}
-                                                        name="nome"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="form-group">
-                                                    <h6 htmlFor="nome">Data</h6>
+                                                    <h6 htmlFor="data_nascimento">Data Nascimento</h6>
 
                                                     <input
                                                         type="date"
                                                         className="form-control"
-                                                        id="nome"
+                                                        id="data_nascimento"
                                                         required
-                                                        value={currentTeste.date}
-                                                        onChange={this.onChangeDate}
-                                                        name="nome"
+                                                        value={currentPaciente.data_nascimento}
+                                                        onChange={this.onChangeData_nascimento}
+                                                        name="data_nascimento"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-8">
+                                                <div className="form-group">
+                                                    <h6 htmlFor="morada">Morada</h6>
+
+                                                    <input
+                                                        type="text"
+                                                        className="form-control"
+                                                        id="morada"
+                                                        required
+                                                        value={currentPaciente.morada}
+                                                        onChange={this.onChangeMorada}
+                                                        name="morada"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-4">
+                                                <div className="form-group">
+                                                    <h6 htmlFor="contacto">Contacto</h6>
+
+                                                    <input
+                                                        type="number"
+                                                        className="form-control"
+                                                        id="contacto"
+                                                        required
+                                                        value={currentPaciente.contacto}
+                                                        onChange={this.onChangeContacto}
+                                                        name="contacto"
                                                     />
                                                 </div>
                                             </div>
@@ -223,8 +253,8 @@ class EditTeste extends Component {
                                             <div className="col-lg-12">
                                                 <div className="center">
                                                     <Link
-                                                        to={`${process.env.PUBLIC_URL}/list-teste`}
-                                                        onClick={this.saveTeste}
+                                                        to={`${process.env.PUBLIC_URL}/list-paciente`}
+                                                        onClick={this.savePaciente}
                                                         className="btn-second"
                                                     >
                                                         Editar
@@ -244,4 +274,4 @@ class EditTeste extends Component {
     }
 }
 
-export default connect(null, { updateTeste })(EditTeste);
+export default connect(null, { updatePaciente })(EditPaciente);
