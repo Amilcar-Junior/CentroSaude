@@ -45,6 +45,9 @@ import EditTeste from "./components/pages/teste/EditTeste";
 import ListPaciente from "./components/pages/paciente/ListPaciente";
 import AddPaciente from "./components/pages/paciente/AddPaciente";
 import EditPaciente from "./components/pages/paciente/EditPaciente";
+import ListEstoque from "./components/pages/estoque/ListEstoque";
+import AddEstoque from "./components/pages/estoque/AddEstoque";
+import EditEstoque from "./components/pages/estoque/EditEstoque";
 
 
 
@@ -92,6 +95,11 @@ class Root extends React.Component {
                         <Route path={`${process.env.PUBLIC_URL}/list-paciente`} component={ListPaciente} />
                         <Route path={`${process.env.PUBLIC_URL}/add-paciente`} component={AddPaciente} />
                         <Route path={`${process.env.PUBLIC_URL}/edit-paciente`} component={EditPaciente} />
+
+
+                        <Route path={`${process.env.PUBLIC_URL}/list-Estoque`} component={ListEstoque} />
+                        <Route path={`${process.env.PUBLIC_URL}/add-Estoque`} component={AddEstoque} />
+                        <Route path={`${process.env.PUBLIC_URL}/edit-Estoque`} component={EditEstoque} />
                         
 
                         
