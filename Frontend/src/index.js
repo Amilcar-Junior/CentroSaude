@@ -53,6 +53,9 @@ import EditEstoque from "./components/pages/estoque/EditEstoque";
 import ListFuncionario from "./components/pages/funcionario/ListFuncionario";
 import AddFuncionario from "./components/pages/funcionario/AddFuncionario";
 import EditFuncionario from "./components/pages/funcionario/EditFuncionario";
+import ListServico from "./components/pages/servico/ListServico";
+import AddServico from "./components/pages/servico/AddServico";
+import EditServoco from "./components/pages/servico/EditServoco";
 
 
 
@@ -111,6 +114,9 @@ class Root extends React.Component {
                         <Route path={`${process.env.PUBLIC_URL}/add-funcionario`} component={AddFuncionario} />
                         <Route path={`${process.env.PUBLIC_URL}/edit-funcionario`} component={EditFuncionario} />
 
+                        <Route path={`${process.env.PUBLIC_URL}/list-servico`} component={ListServico} />
+                        <Route path={`${process.env.PUBLIC_URL}/add-servico`} component={AddServico} />
+                        <Route path={`${process.env.PUBLIC_URL}/edit-servico`} component={EditServoco} />
                         
                     </Layout>
                 </Switch>

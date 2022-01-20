@@ -15,13 +15,13 @@ import ServicosService from "./servicosService";
 
 export const createServico =
 
-    (descricao, custo, date, tipo) => async (dispatch) => {
+    (descricao, custo, date, tipo, urgente,) => async (dispatch) => {
 
         try {
 
             const res = await ServicosService.create({
 
-                data:{descricao, custo, date, tipo}
+                data:{descricao, custo, date, tipo, urgente,}
 
             });
 
