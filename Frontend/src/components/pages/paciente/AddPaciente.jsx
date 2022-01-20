@@ -68,8 +68,12 @@ class AddPaciente extends Component {
             .createPaciente(bi, nome, data_nascimento, morada, contacto)
             .then(() => {
                 this.setState({
-
-                    redirect: true,
+                    bi: "",
+                    nome: "",
+                    data_nascimento: "",
+                    morada: "",
+                    contacto: "",
+                    /* redirect: true, */
 
                 });
             })
@@ -110,10 +114,11 @@ class AddPaciente extends Component {
                                     <div className="ask-inputs">
                                         <div className="row">
                                             <h5 style={{ color: "#456caf" }}>Adicionar Paciente</h5>
-                                            <div className="col-lg-2">
+                                            <div className="col-lg-3">
                                                 <h6 htmlFor="bi">BI <strong style={{ color: "red" }}>*</strong></h6>
 
                                                 <input
+                                                    maxlength="13"
                                                     type="text"
                                                     className="form-control"
                                                     id="bi"
@@ -123,10 +128,11 @@ class AddPaciente extends Component {
                                                     name="bi"
                                                 />
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-6">
                                                 <h6 htmlFor="nome">Nome <strong style={{ color: "red" }}>*</strong></h6>
 
                                                 <input
+                                                maxlength="30"
                                                     type="text"
                                                     className="form-control"
                                                     id="nome"
@@ -136,7 +142,7 @@ class AddPaciente extends Component {
                                                     name="nome"
                                                 />
                                             </div>
-                                            <div className="col-lg-2">
+                                            <div className="col-lg-3">
                                                 <h6 htmlFor="data_nascimento">Data Nascimento <strong style={{ color: "red" }}>*</strong></h6>
 
                                                 <input
@@ -187,6 +193,7 @@ class AddPaciente extends Component {
                                                     </Link>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

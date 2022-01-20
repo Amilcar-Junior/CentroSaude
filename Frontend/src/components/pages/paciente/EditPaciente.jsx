@@ -172,7 +172,7 @@ class EditPaciente extends Component {
                                         <div className="row">
                                             <h5 style={{ color: "#456caf" }}>Editar Dados do Paciente</h5>
 
-                                            <div className="col-lg-2">
+                                            <div className="col-lg-3">
                                                 <div className="form-group">
                                                     <h6 htmlFor="bi">BI</h6>
 
@@ -187,7 +187,7 @@ class EditPaciente extends Component {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-6">
                                                 <div className="form-group">
                                                     <h6 htmlFor="nome">Nome</h6>
 
@@ -202,7 +202,7 @@ class EditPaciente extends Component {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-lg-2">
+                                            <div className="col-lg-3">
                                                 <div className="form-group">
                                                     <h6 htmlFor="data_nascimento">Data Nascimento</h6>
 
@@ -261,6 +261,7 @@ class EditPaciente extends Component {
                                                     </Link>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
