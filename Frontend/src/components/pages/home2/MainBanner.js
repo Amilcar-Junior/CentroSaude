@@ -96,7 +96,7 @@ class MainBanner extends Component {
                     <form className="findfrom-wrapper">
                         <div className="row">
                             <div className="col-lg-3">
-                                <input type="text" name="whereto" placeholder="Where To..." />
+                                <input type="text" name="whereto" placeholder="Nome ..." />
                             </div>
                             <div className="col-lg-3">
                                 <div className="calendar-input">
@@ -107,18 +107,18 @@ class MainBanner extends Component {
                             <div className="col-lg-3">
                                 <div className="custom-select">
                                     <select>
-                                        <option value={0}>Travel Type</option>
-                                        <option value={1}>City Tours</option>
-                                        <option value={2}>Vacation Tours</option>
-                                        <option value={3}>Couple Tours </option>
-                                        <option value={4}>Adventure Tours</option>
-                                        <option value={5}>Group Tours</option>
+                                        <option value={0}>Serviço?</option>
+                                        <option value={4}>Consulta</option>
+                                        <option value={1}>Diagnostico</option>
+                                        <option value={2}>Vacinação</option>
+                                        <option value={3}>Interna </option>
+                                        <option value={5}>Geral</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="find-btn">
-                                    <Link to={`#`} className="btn-second"><i className="bx bx-search-alt" />Procurar</Link>
+                                    <Link to={`/list-servico`} className="btn-second"><i className="bx bx-search-alt" />Procurar</Link>
                                 </div>
                             </div>
                         </div>
