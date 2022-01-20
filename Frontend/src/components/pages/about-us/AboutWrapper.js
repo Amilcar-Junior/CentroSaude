@@ -35,26 +35,31 @@ class AboutWrapper extends Component {
                        </div>
                        <div className="col-lg-5 col-md-12">
                            <div className="about-wrapper-right section-head head-left">
-                               <h5>About TourX</h5>
-                               <h2>The Best Travel Agency
-                                   Company.</h2>
-                               <p>Fusce aliquam luctus est, eget tincidunt velit scelerisque
-                                   rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec,
-                                   mattis mauris. Nunc nec ornare nisi, vel elementum est.
-                                   Proin malesuada venenatis ex, eu fringilla justo scelerisque
-                                   sit amet. Sed fringilla nec purus non venenatis. Aliquam
-                                   nec turpis pharetra, bibendum lorem in, sollicitudin nibh.
-                                   Nulla sit amet lacus diam.</p>
+                               <h5>Sobre Centros de Saude</h5>
+                               <p>São instituições através da qual se presta uma atenção primária de saúde a indivíduos e famílias,
+                                considerando estas como elementos de uma comunidade com os seus problemas, 
+                                necessidades e comportamentos".A atenção primária engloba acções de carácter preventivo, 
+                                curativo (diagnóstico, tratamento e referência aos níveis diferenciados) cuidados de reabilitação 
+                                (que a este nível não requerem pessoal nem material especializado) e medidas de promoção da saúde.
+                                 Os Centros de Saúde possuem uma equipa de saúde chefiada por um médico e dispõem duma rede de extensões,
+                                  para aproximar a prestação de cuidados das populações.</p>
+                                <h5>Conteúdo funcional (Prestações)</h5>
                                <ul className="about-list">
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
-                                   <li><i className="flaticon-double-checking" /> Donec viverra orci On a</li>
+                                   <li><i className="flaticon-double-checking" /> Atendimento à mulher</li>
+                                   <li><i className="flaticon-double-checking" /> Saúde escolar</li>
+                                   <li><i className="flaticon-double-checking" /> Atendimento à criança</li>
+                                   <li><i className="flaticon-double-checking" /> Saúde mental</li>
+                                   <li><i className="flaticon-double-checking" /> Saúde ocupacional</li>
+                                   <li><i className="flaticon-double-checking" /> Saúde oral</li>
+                                   <li><i className="flaticon-double-checking" /> Profilaxia das doenças evitáveis</li>
+                                   <li><i className="flaticon-double-checking" /> Oftalmologia</li>
+                                   <li><i className="flaticon-double-checking" /> Promoção de hábitos saudáveis</li>
+                                   <li><i className="flaticon-double-checking" /> Otorrinolaringologia</li>
+                                   <li><i className="flaticon-double-checking" /> Acção medico-social integrada</li>
+                                   <li><i className="flaticon-double-checking" /> Reabilitação</li>
                                </ul>
                                <div className="about-wrapper-btn">
-                                   <Link to={"#"} className="btn-common">Read More</Link>
+                                   <a href="https://www.minsaude.gov.cv/index.php/atencao-primaria-secundaria/centros-de-saude"className="btn-common">Consulte mais informações</a>
                                </div>
                            </div>
                        </div>
