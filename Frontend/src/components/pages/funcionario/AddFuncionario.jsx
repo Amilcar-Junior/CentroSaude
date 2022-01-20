@@ -127,8 +127,21 @@ class AddFuncionario extends Component {
             .createFuncionario(bi, nome, morada, email, contacto, especialidade, cargo)
             .then(() => {
                 this.setState({
+                    bi: "",
+                    nome: "",
+                    morada: "",
+                    email: "",
+                    contacto: "",
+                    especialidade: "",
+                    cargo: "",
+        
+                    
+                    nome_especialidade: "",
+        
+                    
+                    nome_cargo: "",
 
-                    redirect: true,
+                    /* redirect: true, */
 
                 });
             })
@@ -275,6 +288,7 @@ class AddFuncionario extends Component {
                                                     </Link>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

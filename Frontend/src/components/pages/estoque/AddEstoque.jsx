@@ -47,8 +47,9 @@ class AddEstoque extends Component {
             .createEstoque(nome_produto, quantidade)
             .then(() => {
                 this.setState({
-
-                    redirect: true,
+                    nome_produto: "",
+                    quantidade: "",
+                    /* redirect: true, */
 
                 });
             })
@@ -106,7 +107,7 @@ class AddEstoque extends Component {
                                                 <h6 htmlFor="nome">Quantidade <strong style={{ color: "red" }}>*</strong></h6>
 
                                                 <input
-                                                    type="quantidade"
+                                                    type="number"
                                                     className="form-control"
                                                     id="quantidade"
                                                     required
