@@ -14,9 +14,7 @@ class AboutUs extends Component {
             <AboutWrapper/>
            <GuideWrapper/>
            <Achievement/>
-           <AboutReview/>
-           <AboutBlog/>
-
+ 
        </>
     );
   }
