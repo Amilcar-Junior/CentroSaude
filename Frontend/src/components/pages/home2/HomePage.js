@@ -51,9 +51,6 @@ class HomePageTwo extends Component {
             <MainBanner/>
             <Packages/>
            <Achievement/>
-           <Destinations/>
-           <Review/>
-           <Features/>
            <Blog/>
            {/*---------End Imported All Sections-----------*/}
        </div>

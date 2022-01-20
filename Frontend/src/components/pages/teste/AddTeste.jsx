@@ -22,6 +22,7 @@ class AddTeste extends Component {
             email: "",
             tel: "",
             date: "",
+            
 
             redirect: false,
         };
@@ -97,7 +98,7 @@ class AddTeste extends Component {
                         </div>
                         <div className="col-lg-12">
                             <div className="end" />
-                            <form>
+                            <form action="#">
                                 <div className="submit-form">
 
                                     <div className="ask-inputs">
@@ -167,6 +168,7 @@ class AddTeste extends Component {
                                                     </Link>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

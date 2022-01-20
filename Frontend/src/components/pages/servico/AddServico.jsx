@@ -68,8 +68,8 @@ class AddServico extends Component {
         const funcionario = await http.get("/funcionarios");
 
         const data = funcionario.data.data;
-
-        const options = data.map((e) => ({
+        const medico = "Medico (a)";
+        const options = data.filter(c => c.attributes.cargo === medico).map((e) => ({
             value: e.id,
             label: e.attributes.nome,
         }));
@@ -151,7 +151,7 @@ class AddServico extends Component {
 
     async saveServico() {
 
-        const { descricao, custo, date, tipo, urgente,} = this.state;
+        const { descricao, custo, date, tipo, urgente, } = this.state;
         console.log(this.state);
 
         this.props
@@ -159,8 +159,29 @@ class AddServico extends Component {
             .then(() => {
                 this.setState({
 
-                    redirect: true,
+                    descricao: "",
+                    custo: "",
+                    tipo: "",
+                    date: "",
+                    urgente: "NÃO",
 
+                    paciente: "",
+                    funcionario: "",
+
+
+                    nome_paciente: "",
+
+
+                    nome_funcionario: "",
+
+
+                    nome_tipo: "",
+
+
+                    nome_urgente: "",
+
+                    /* redirect: true,
+ */
                 });
             })
             .catch((err) => console.log(err.response));
@@ -212,7 +233,7 @@ class AddServico extends Component {
                                             </div>
 
                                             <div className="col-lg-6">
-                                                <h6 htmlFor="funcionario">Funcionario <strong style={{ color: "red" }}>*</strong></h6>
+                                                <h6 htmlFor="funcionario">Funcionario ( Medico (a) ) <strong style={{ color: "red" }}>*</strong></h6>
                                                 <Select
                                                     options={this.state.selectOptionsFuncionario}
                                                     onChange={this.onChangeFuncionario}
@@ -266,14 +287,14 @@ class AddServico extends Component {
 
                                             <div className="col-lg-6">
                                                 <h6 htmlFor="custo">Custo <strong style={{ color: "red" }}>*</strong></h6>
-                                                
+
                                                 <input
                                                     type="number"
 
                                                     className="form-control"
                                                     id="custo"
                                                     required
-                                                    
+
                                                     value={this.state.custo}
                                                     onChange={this.onChangeCusto}
                                                     name="custo"
@@ -299,6 +320,7 @@ class AddServico extends Component {
                                                     </Link>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
