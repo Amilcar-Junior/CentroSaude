@@ -92,7 +92,7 @@ class Headers extends Component {
                                             <li>
                                                 <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/`} onClick={this.scrollTop} >Home</NavLink >
                                             </li>
-                                            <li className="has-child-menu">
+                                            {/* <li className="has-child-menu">
                                             <Link to={"#"}>Listas</Link>
                                             <i className="fl flaticon-plus">+</i>
                                             <ul className="sub-menu">
@@ -109,10 +109,26 @@ class Headers extends Component {
                                                     <NavLink activeClassName="active" to={`/list-servico`} className="sub-item" onClick={this.scrollTop}>Serviços</NavLink>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> */}
                                             {/* <li>
                                                 <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/list-teste`} onClick={this.scrollTop} >Lista Teste</NavLink >
                                             </li> */}
+
+                                            <li>
+                                                <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/list-paciente`} onClick={this.scrollTop} >Paciente</NavLink >
+                                            </li>
+
+                                            <li>
+                                                <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/list-funcionario`} onClick={this.scrollTop} >Funcionario</NavLink >
+                                            </li>
+
+                                            <li>
+                                                <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/list-estoque`} onClick={this.scrollTop} >Estoque</NavLink >
+                                            </li>
+
+                                            <li>
+                                                <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/list-servico`} onClick={this.scrollTop} >Serviços</NavLink >
+                                            </li>
 
                                             <li>
                                                 <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/about-us`} onClick={this.scrollTop} >Sobre Nos</NavLink >
